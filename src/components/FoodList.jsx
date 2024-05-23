@@ -1,19 +1,10 @@
 import { useState } from "react";
-import "./App.css";
-/* import foodsJson from './foods.json'
-import FoodBox from "./components/FoodBox";
-import AddFoodForm from "./components/AddFoodForm"; */
-import FoodList from "./components/FoodList";
+import FoodBox from "./FoodBox";
+import AddFoodForm from "./AddFoodForm";
+import foodsJson from '../foods.json';
 
-function App() {
-
-  return (
-    <div className="App">
-      <FoodList/>
-    </div>
-  )
-
-  /* const [foods, setFoods] = useState(foodsJson)
+const FoodList = ()=> {
+    const [foods, setFoods] = useState(foodsJson)
 
   const deleteFood = foodId => {
     // returns every food that does NOT have this movieId
@@ -52,13 +43,9 @@ function App() {
       </div>
    
     </div>
-  ); */
+  );
+
+
 }
 
-export default App;
-
-/* 
-name= {name}
-              calories= {calories}
-              image= {image}
-              nrServings= {servings}  */
+export default FoodList
